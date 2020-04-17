@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrentWeatherComponent } from '../current-weather/current-weather.component';
 /* import { ModelFuture } from '../app/modelFuture' */
 
 
@@ -8,23 +7,9 @@ import { CurrentWeatherComponent } from '../current-weather/current-weather.comp
   templateUrl: './future-weather.component.html',
   styleUrls: ['./future-weather.component.scss']
 })
-export class FutureWeatherComponent extends CurrentWeatherComponent implements OnInit {
+export class FutureWeatherComponent implements OnInit {
 
-  // teste:any
-
-  // constructor(infoApi: any) {
-  //   super(infoApi);
-  //   this.teste = this.infoApi;
-    
-  // }
-
-//   constructor(nome:string,cor:string,cidade:string,liga:string,divisao:string){
-//     super(nome,cor,cidade)
-//     this.liga = liga;
-//     this.divisao = divisao;
-// }
-
-
+  constructor() { }
   ngOnInit(): void {
   }
 

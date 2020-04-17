@@ -4,7 +4,9 @@
     <span class="text-current-weather">{{ weatherData.description | uppercase }}</span>
     <span class="number-current-weather">{{ weatherData.temperature }}˚</span>
     <span class="text-current-weather">{{ weatherData.date | uppercase }}</span>
+    <span class="text-current-weather">{{ weatherData.icon }}</span>
   </div>
+  <br>
   <div class="input-city">
     <form [formGroup]="formWeather" (ngSubmit)="getCity(formWeather.value)">
       <input class="txtSearch" name="city" formControlName="city" type="text" value="" placeholder="Digite o que você procura" />
