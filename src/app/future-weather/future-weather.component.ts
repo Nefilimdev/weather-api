@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 /* import { ModelFuture } from '../app/modelFuture' */
 
 
@@ -9,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FutureWeatherComponent implements OnInit {
 
+
+  @Input() receptor2: any;
+  @Input() receptor3: any;
+  @Input() receptor4: any;
+  @Input() infoApi1:any;
+  @Input() data:any;
+
+
   constructor() { }
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

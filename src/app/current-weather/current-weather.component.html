@@ -1,17 +1,32 @@
-<div class="container">
+
+  <div class="form">
+    <form [formGroup]="formWeather" (ngSubmit)="getCity(formWeather.value)">
+      <input class="txtSearch" name="city" formControlName="city" type="text" value=""
+        placeholder="Digite a cidade:" />
+      <input class="search" type="submit" value="" />
+      <p id="city">Clima hoje em: {{ receptor.city | titlecase }}</p>
+    </form>
+  </div>
+  <div class="container">
+  <br>
   <div class="icon-current-weather">
-    <img src="../../assets/animated/cloudy-day-1.svg" alt="cloudy">
-    <span class="text-current-weather">{{ weatherData.description | uppercase }}</span>
-    <span class="number-current-weather">{{ weatherData.temperature }}˚</span>
-    <span class="text-current-weather">{{ weatherData.date | uppercase }}</span>
-    <span class="text-current-weather">{{ weatherData.icon }}</span>
+    <div class="icon">
+      <span class="text-current-weather">
+        <img src="https://www.weatherbit.io/static/img/icons/{{ infoApi.data[0].weather.icon }}.png"></span>
+      <!-- <span class="icon-temperature"><img height="20" width="20"/></span> -->
+      <span class="text-current-weather">{{ receptor.description | uppercase }}</span>
+    </div>
+    <div class="dates">
+      <span class="number-current-weather">{{ receptor.temperature }}˚</span><br><br><br>
+      <span class="text-current-weather">{{ receptor.date}}</span><br>
+    </div>
   </div>
   <br>
   <div class="input-city">
-    <form [formGroup]="formWeather" (ngSubmit)="getCity(formWeather.value)">
-      <input class="txtSearch" name="city" formControlName="city" type="text" value="" placeholder="Digite o que você procura" />
-      <input class="search" type="submit" value=""/>
-      <p>Clima hoje em: {{ weatherData.city | titlecase }}</p>
-    </form>
+
   </div>
-</div>
+</div> 
+<!-- "https://www.weatherbit.com.io%2Fstatic%2Fimg%2Ficons%2F%icon%5D.png" -->
+
+<!-- <span class="icon-temperature"><img height="50" width="50" 
+  src="https://www.weatherbit.io/static/img/icons/{{weather.data[0].weather.icon}}.png"/></span> -->

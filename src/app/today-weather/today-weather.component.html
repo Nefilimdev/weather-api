@@ -1,23 +1,33 @@
+
 <div class="container">
     <div class="nav-grid-content">
         <p class="">
             <i _ngcontent-qvy-c30="" class="material-icons">filter_drama</i>
         </p>
         <label>Durante o dia</label>
+        <h1>Hora do nascer do sol - {{ data.sunrise }}</h1>
+        <h1>Hora do pôr do sol - {{ data.sunset }}</h1>
+        <h1>Velocidade do vento - {{ data.wind_spd | number }} m/s</h1>
+        <h1>Humidade relativa - {{ data.rh }}%</h1>
     </div>
     <div class="morn">
-        <p class="morn-desc">Manhã</p>
-        <img class="morn-icon" src="../../assets/static/day.svg" alt="">
-        <p class="morn-degree">32º</p>
+        <p class="morn-desc">Minima</p>
+        <!-- <img class="morn-icon" src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[0].weather.icon }}.png" alt=""> -->
+        <p class="morn-degree">{{ data1.min_temp }}</p>
     </div>
     <div class="aftn">
-        <p class="aftn-desc">Tarde</p>
-        <img class="aftn-icon" src="../../assets/static/rainy-3.svg" alt="">
-        <p class="aftn-degree">19º</p>
+        <p class="aftn-desc">Média</p>
+        <!-- <img class="aftn-icon" src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[0].weather.icon }}.png" alt=""> -->
+        <p class="aftn-degree">{{ data1.temp }}</p>
+        <p class="aftn-degree">Mais tarde: {{ infoApi1.data[0].weather.description }}</p>
+            <img class="nign-icon" 
+                src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[0].weather.icon }}.png" alt=""
+            >
     </div>
     <div class="nign">
-        <p class="nign-desc">Noite</p>
-        <img class="nign-icon" src="../../assets/static/thunder.svg" alt="">
-        <p class="nign-degree">15º</p>
+        <p class="nign-desc">Máxima</p>
+        <!-- <img class="nign-icon" src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[0].weather.icon }}.png" alt=""> -->
+        <p class="nign-degree">{{ data1.max_temp }}</p>
     </div>
+        
 </div>

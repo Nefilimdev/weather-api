@@ -5,18 +5,24 @@
         </p>   
     </div>
     <div class="morn">
-        <p class="morn-desc">Sexta</p>
-        <img class="morn-icon" src="../../assets/static/day.svg" alt="">
-        <p class="morn-degree">32º</p>
+        <p class="morn-desc">{{ receptor2.datetime }}</p>
+        <img class="morn-icon"
+            src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[1].weather.icon }}.png" alt="">
+        <p class="morn-degree">{{ receptor2.temp }}º</p>
+        <p class="aftn-desc">{{ infoApi1.data[1].weather.description }}</p>
     </div>
     <div class="aftn">
-        <p class="aftn-desc">Sábado</p>
-        <img class="aftn-icon" src="../../assets/static/cloudy-day-3.svg" alt="">
-        <p class="aftn-degree">19º</p>
+        <p class="aftn-desc">{{ receptor3.datetime }}</p>
+        <img class="aftn-icon" 
+            src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[2].weather.icon }}.png" alt="">
+        <p class="aftn-degree">{{ receptor3.temp }}º</p>
+        <p class="aftn-desc">{{ infoApi1.data[2].weather.description }}</p>
     </div>
     <div class="nign">
-        <p class="nign-desc">Domingo</p>
-        <img class="nign-icon" src="../../assets/static/snowy-4.svg" alt="">
-        <p class="nign-degree">15º</p>
+        <p class="nign-desc">{{ receptor4.datetime }}</p>
+            <img class="nign-icon" 
+                src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[3].weather.icon }}.png" alt="">
+        <p class="nign-degree">{{ receptor4.temp }}º</p>
+        <p class="aftn-desc">{{ infoApi1.data[3].weather.description }}</p>
     </div>
 </div>

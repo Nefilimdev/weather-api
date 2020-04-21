@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { SearchWeatherService } from '../search-weather.service';
+import { Model } from '../model';
+
 
 @Component({
   selector: 'app-today-weather',
@@ -7,9 +10,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodayWeatherComponent implements OnInit {
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  @Input() data:any;
+  @Input() data1:any;
+  @Input() infoApi1:any;
 
+  
+  constructor(private weatherApi: SearchWeatherService) { }
+
+  ngOnInit(): void { }
+  
 }
+
+
+
+
+
+
+
+
+
