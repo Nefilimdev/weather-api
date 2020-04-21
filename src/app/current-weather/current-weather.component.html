@@ -1,32 +1,22 @@
-
-  <div class="form">
-    <form [formGroup]="formWeather" (ngSubmit)="getCity(formWeather.value)">
-      <input class="txtSearch" name="city" formControlName="city" type="text" value=""
-        placeholder="Digite a cidade:" />
-      <input class="search" type="submit" value="" />
-      <p id="city">Clima hoje em: {{ receptor.city | titlecase }}</p>
-    </form>
-  </div>
+<div class="current-container">
   <div class="container">
-  <br>
-  <div class="icon-current-weather">
-    <div class="icon">
-      <span class="text-current-weather">
-        <img src="https://www.weatherbit.io/static/img/icons/{{ infoApi.data[0].weather.icon }}.png"></span>
-      <!-- <span class="icon-temperature"><img height="20" width="20"/></span> -->
-      <span class="text-current-weather">{{ receptor.description | uppercase }}</span>
+    <div class="container__item">
+      <form [formGroup]="formWeather" (ngSubmit)="getCity(formWeather.value)" class="form">
+        <input name="city" formControlName="city" type="text" value="" class="form__field"
+          placeholder="Digite a cidade:" />
+        <button type="submit" value="" class="btn btn--primary btn--inside">Search</button>
+        <h3 id="city">Clima hoje em: {{ receptor.city | titlecase }}</h3>
+      </form>
     </div>
-    <div class="dates">
-      <span class="number-current-weather">{{ receptor.temperature }}˚</span><br><br><br>
-      <span class="text-current-weather">{{ receptor.date}}</span><br>
+    <div class="container__item container__item--bottom">
     </div>
   </div>
-  <br>
-  <div class="input-city">
-
+  <div class="display-content">
+    <p>
+      <img src="https://www.weatherbit.io/static/img/icons/{{ infoApi.data[0].weather.icon }}.png">
+    </p>
+    <p class="labels" >{{ receptor.description | uppercase }}</p>
+    <p class="labels" >{{ receptor.date}}</p>
+    <h1 class="temperature" >{{ receptor.temperature }}˚</h1>
   </div>
-</div> 
-<!-- "https://www.weatherbit.com.io%2Fstatic%2Fimg%2Ficons%2F%icon%5D.png" -->
-
-<!-- <span class="icon-temperature"><img height="50" width="50" 
-  src="https://www.weatherbit.io/static/img/icons/{{weather.data[0].weather.icon}}.png"/></span> -->
+</div>

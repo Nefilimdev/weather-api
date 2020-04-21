@@ -1,28 +1,35 @@
-<div class="container">
-    <div class="nav-grid-content">
-        <p>
-            Próximos dias
-        </p>   
+<div class="title">
+    <h3 >Próximos dias</h3>
+</div>
+<div class="future">
+
+    <div class="dia1">
+        <p>{{ receptor2.datetime }}</p>
+            <p>
+                <img width="40px" height="40px" 
+                    src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[1].weather.icon }}.png" alt="">
+            </p>
+        <p>{{ receptor2.temp }}º</p>
+        <p>{{ infoApi1.data[1].weather.description }}</p>
     </div>
-    <div class="morn">
-        <p class="morn-desc">{{ receptor2.datetime }}</p>
-        <img class="morn-icon"
-            src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[1].weather.icon }}.png" alt="">
-        <p class="morn-degree">{{ receptor2.temp }}º</p>
-        <p class="aftn-desc">{{ infoApi1.data[1].weather.description }}</p>
-    </div>
-    <div class="aftn">
-        <p class="aftn-desc">{{ receptor3.datetime }}</p>
-        <img class="aftn-icon" 
-            src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[2].weather.icon }}.png" alt="">
+
+    <div class="dia1">
+        <p>{{ receptor3.datetime }}</p>
+            <p>
+                <img width="40px" height="40px"
+                    src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[2].weather.icon }}.png" alt="">
+            </p>
         <p class="aftn-degree">{{ receptor3.temp }}º</p>
         <p class="aftn-desc">{{ infoApi1.data[2].weather.description }}</p>
     </div>
-    <div class="nign">
-        <p class="nign-desc">{{ receptor4.datetime }}</p>
-            <img class="nign-icon" 
-                src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[3].weather.icon }}.png" alt="">
-        <p class="nign-degree">{{ receptor4.temp }}º</p>
-        <p class="aftn-desc">{{ infoApi1.data[3].weather.description }}</p>
+
+    <div class="dia1">
+        <p>{{ receptor4.datetime }}</p>
+            <p>
+                <img width="40px" height="40px"
+                    src="https://www.weatherbit.io/static/img/icons/{{ infoApi1.data[3].weather.icon }}.png" alt="">
+            </p>
+        <p>{{ receptor4.temp }}º</p>
+        <p>{{ infoApi1.data[3].weather.description }}</p>
     </div>
 </div>
