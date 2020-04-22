@@ -1,19 +1,36 @@
 .future {
-    border: 2px solid;
+    margin-top: 40px;
+    border: none;
     display: flex;
+    // margin: -20px 0 0 0;
 }
 
 .title{
     width: 100%;
-    border: 2px solid;
+    border: none;
     display: flex;
     justify-content: center;
     color:rgb(0, 0, 0);
     margin: 0 auto;
+    font-size: x-large;
 }
 
-.dia1{
-    border: 2px solid;
+.dia1, p{
+   
+    border: none;
     margin: auto;
     color: rgb(0, 0, 0);
+    font-size: large;
+    font-weight: bold;
 }
+
+img{
+    border: none;
+    width: 50px; 
+    height: 50px; 
+}
+
+ 
+
+
+  

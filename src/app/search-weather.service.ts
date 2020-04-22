@@ -15,9 +15,9 @@ export class SearchWeatherService {
 
   private baseUrl = 'http://api.weatherbit.io/v2.0/current?'
   /* private dailyUrl = 'https://www.weatherbit.io/api/weather-history-daily' */
-  private key = 'country=BR&lang=pt&key=bbeda0024d734db4a8a7b7eb12cf509e'
+  private key = 'country=BR&lang=pt&key=58123a3239384781a869eebd1633cdcf'
   
-  private apiFuture = "https://api.weatherbit.io/v2.0/forecast/daily?key=33e81a0b929a42cf912fc0769d35d4c9&lang=pt&days=4&country=BR&city="
+  private apiFuture = "https://api.weatherbit.io/v2.0/forecast/daily?key=07c15d71e0ff441d9d0ae6bcb6a4b55f&lang=pt&days=4&country=BR&city="
 
   getWeather(cityOrZip, searchValue): Observable<Model[]>{
     return this.apiUrl.get<Model[]>(this.baseUrl+`${cityOrZip}${searchValue}&${this.key}`)

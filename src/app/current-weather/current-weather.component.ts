@@ -62,6 +62,33 @@ export class CurrentWeatherComponent implements OnInit {
         resp1.description,
         resp1.valid_date
       )
+      let resp2 = this.infoApi1.data[1];
+      this.receptor2 = new ModelFuture(
+        resp2.min_temp,
+        resp2.temp,
+        resp2.max_temp,
+        resp2.weather.icon,
+        resp2.weather.description,
+        resp2.datetime
+      )
+      let resp3 = this.infoApi1.data[2];
+      this.receptor3 = new ModelFuture(
+        resp3.min_temp,
+        resp3.temp,
+        resp3.max_temp,
+        resp3.weather.icon,
+        resp3.weather.description,
+        resp3.datetime
+      )
+      let resp4 = this.infoApi1.data[3];
+      this.receptor4 = new ModelFuture(
+        resp4.min_temp,
+        resp4.temp,
+        resp4.max_temp,
+        resp4.weather.icon,
+        resp4.weather.description,
+        resp4.datetime
+      )
       
     })
   }

@@ -4,19 +4,20 @@
       <form [formGroup]="formWeather" (ngSubmit)="getCity(formWeather.value)" class="form">
         <input name="city" formControlName="city" type="text" value="" class="form__field"
           placeholder="Digite a cidade:" />
-        <button type="submit" value="" class="btn btn--primary btn--inside">Search</button>
-        <h3 id="city">Clima hoje em: {{ receptor.city | titlecase }}</h3>
+        <button type="submit" value="" class="btn btn--primary btn--inside">Pesquisar</button>
       </form>
     </div>
     <div class="container__item container__item--bottom">
     </div>
   </div>
   <div class="display-content">
-    <p>
+    <p class="labels">
       <img src="https://www.weatherbit.io/static/img/icons/{{ infoApi.data[0].weather.icon }}.png">
+        {{ receptor.description | uppercase }} 
     </p>
-    <p class="labels" >{{ receptor.description | uppercase }}</p>
-    <p class="labels" >{{ receptor.date}}</p>
-    <h1 class="temperature" >{{ receptor.temperature }}˚</h1>
+    <!-- <p class="labels" >{{ receptor.date}}</p> -->
+    <h1 class="temperature" >{{ receptor.temperature }}˚
+      <h2 id="city">{{ receptor.city | titlecase }}</h2>
+    </h1>
   </div>
 </div>

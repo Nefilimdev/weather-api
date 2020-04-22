@@ -1,6 +1,28 @@
-.today-content{
-    border: solid;
+// .hidden{
+//     display:none ;
+// }
+// .input{
+//     display: block;
+// }
+.today-content {
+    // border: solid;
     text-align: center;
-   width: 40%;
-   margin: -42% 0 0 0;
+    width: 450px;
+    height: 300px;
+    // margin: 160px auto auto auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 900px;
+    margin-top: -27%;
+    font-weight: bold;
 }
+
+.today-content p {
+    font-size: 20px;
+    margin: 5px 35px 0 0;
+}
+
+/* .par{
+    font-size: 30px;
+} */

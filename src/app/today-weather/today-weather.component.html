@@ -1,14 +1,12 @@
-<div class="today-content" >
-<p>Durante o dia</p>
-<p>Hora do nascer do sol - {{ data.sunrise }}</p>
-<p>Hora do pôr do sol - {{ data.sunset }}</p>
-<p>Velocidade do vento - {{ data.wind_spd | number }} m/s</p>
-<p>Humidade relativa - {{ data.rh }}%</p>
-<p>Minima</p>
-<p>{{ data1.min_temp }}º</p>
-<p>Média</p>
-<p>{{ data1.temp }}</p>
-<p>Mais tarde: {{ infoApi1.data[0].weather.description }}</p>
-<p>Máxima</p>
-<p>{{ data1.max_temp }}º</p>
+<div class="today-content">
+    <p class="par">Informações do dia:</p>
+    <br>
+    <div id="show" class="hidden"></div>
+    <p>Hora do nascer do sol - {{ data.sunrise }}h</p>
+    <p>Hora do pôr do sol - {{ data.sunset }}h</p>
+    <p>Velocidade do vento - {{ data.wind_spd | number }} m/s</p>
+    <p>Humidade relativa - {{ data.rh }}%</p>
+    <p>Minima: {{ data1.min_temp }}º</p>
+    <p>Média: {{ data1.temp }}º</p>
+    <p>Máxima: {{ data1.max_temp }}º</p>
 </div>

@@ -2,13 +2,11 @@
 <div class="main-content">
   <div class="cloud"></div>
   <div class="content-weather">
-
-  <!-- <div class="header-content"> -->
+    <div class="header" >
     <app-current-weather #Property></app-current-weather>
     <app-today-weather [data]="Property.receptor" [data1]="Property.receptor1" [infoApi1]="Property.infoApi1">
     </app-today-weather>
-  <!-- </div> -->
-
+  </div>
     <app-future-weather [data]="Property.receptor" [infoApi1]="Property.infoApi1" [receptor2]="Property.receptor2"
       [receptor3]="Property.receptor3" [receptor4]="Property.receptor4">
     </app-future-weather>
