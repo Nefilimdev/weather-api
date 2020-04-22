@@ -6,5 +6,8 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     // background-image: src="assets/img/1.jpeg";
-    // background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('assets/img/5.jpeg');
+    z-index: -1;
 }
